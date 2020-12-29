@@ -1,12 +1,13 @@
 <script>
 import IconBtn from "./IconBtn.svelte"
 import { Links } from '../store'
+import { copy } from '../utils/copy'
 export let id = ''
 export let title = ''
 export let link = ''
 
-function copyLinkToClipboard() {
-  console.log({link})
+async function copyLinkToClipboard() {
+  await copy(link)
 }
 
 function onDelete(id) {
