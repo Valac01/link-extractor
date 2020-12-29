@@ -1,4 +1,6 @@
 <script>
+  import { flip } from 'svelte/animate'
+  import { fly, fade } from 'svelte/transition'
   import Btn from './Btn.svelte'
   import ListItem from './ListItem.svelte'
   import { Links } from '../store'
@@ -27,7 +29,9 @@
   </div>
 
   {#each $Links as { id, title, link } (id) }
-    <ListItem id={id} title={title} link={link}/>
+    <div out:fly={{x: -100, duration: 200}} in:fade animate:flip={{duration: 300}}>
+      <ListItem id={id} title={title} link={link}/>
+    </div>
   {:else}
     <div>
       No links to copy
