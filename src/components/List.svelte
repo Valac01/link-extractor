@@ -1,12 +1,11 @@
 <script>
   import Btn from './Btn.svelte'
   import ListItem from './ListItem.svelte'
-  const linkList = [
-    {title: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere qui magni, accusamus dolore consectetur quos delectus molestias distinctio nisi velit quibusdam adipisci maiores et ea aliquid quaerat, vel fuga quas?', link: 'https://plucreo.com'},
-    {title: 'Episode 2', link: 'https://plucreo.com'},
-    {title: 'Episode 3', link: 'https://plucreo.com'},
-    {title: 'Episode 4', link: 'https://plucreo.com'},
-  ]
+  import { Links } from '../store'
+
+  function deleteAllLinks() {
+    Links.update(() => [])
+  }
 </script>
 
 <section class="mt-8">
@@ -14,12 +13,12 @@
     <h3 class="text-gray-600 text-lg half-underline">Links</h3>
     <div class="controls">
       <Btn primary={true}>Copy All</Btn>
-      <Btn>Delete All</Btn>
+      <Btn on:click={deleteAllLinks}>Delete All</Btn>
     </div>
   </div>
 
-  {#each linkList as { title, link }}
-    <ListItem title={title} link={link}/>
+  {#each $Links as { id, title, link } (id) }
+    <ListItem id={id} title={title} link={link}/>
   {:else}
     <div>
       No links to copy

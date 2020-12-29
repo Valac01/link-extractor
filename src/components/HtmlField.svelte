@@ -1,8 +1,30 @@
 <script>
   import Btn from './Btn.svelte'
-
+  import { extract } from '../utils/extractLinks'
+  import { Links, HtmlContent } from '../store'
+  let htmlInput = ''
+  
   function reset() {
-    console.log('Reset')
+    htmlInput = ''
+    Links.update( () => {
+      return []
+    })
+    HtmlContent.update(() => {
+      return ''
+    }) 
+  }
+  
+  function onExtract() {
+    const extractedLinks = extract()
+    Links.update( () => {
+      return extractedLinks
+    })
+  }
+
+  function updateStore() {
+    HtmlContent.update(() => {
+      return htmlInput
+    }) 
   }
 </script>
 
@@ -12,10 +34,9 @@
     <Btn on:click={reset}>Reset</Btn>
   </div>
   <div class="html-area">
-    <!-- <textarea class="html-input"></textarea> -->
-    <div class="html-input rounded-md shadow-lg text-xs text-gray-500" contenteditable="true"></div>
+    <div class="html-input rounded-md shadow-lg overflow-x-auto text-xs text-gray-500" contenteditable="true" bind:textContent={htmlInput} on:input={updateStore}></div>
     <div class="html-btn">
-      <Btn primary={true}>Extract</Btn>
+      <Btn primary={true} on:click={onExtract}>Extract</Btn>
     </div>
   </div>
 </section>

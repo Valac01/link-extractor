@@ -2,6 +2,7 @@
 	import Navbar from './components/Navbar.svelte'
 	import HtmlField from './components/HtmlField.svelte';
 	import List from './components/List.svelte';
+  import ShadowDiv from './components/ShadowDiv.svelte'
 </script>
 
 <Navbar />
@@ -9,6 +10,7 @@
 	<div class="container">
 		<HtmlField />
 		<List />
+		<ShadowDiv />
 	</div>
 </main>
 
