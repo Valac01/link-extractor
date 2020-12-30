@@ -6,7 +6,7 @@
 </script>
 
 <Navbar />
-<main class="bg-gray-100 px-2 sm:px-0 py-4">
+<main class="bg-gray-100 dark:bg-gray-700 px-2 sm:px-0 py-4">
 	<div class="container max-w-screen-lg">
 		<HtmlField />
 		<List />

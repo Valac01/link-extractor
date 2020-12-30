@@ -3,7 +3,7 @@ module.exports = {
   purge: [
     './src/**/*.svelte'
   ],
-  darkMode: false, // or 'media' or 'class'
+  darkMode: 'class', // or 'media' or 'class'
   theme: {
     container: {
       center: true,

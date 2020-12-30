@@ -17,8 +17,8 @@ function onDelete(id) {
 }
 </script>
 
-<div class="list-item bg-white rounded-md shadow-lg flex justify-between items-center px-4 py-2 my-4">
-  <div class="text-lg text-gray-600 truncate">
+<div class="list-item bg-white dark:bg-gray-600 rounded-md shadow-lg flex justify-between items-center px-4 py-2 my-4">
+  <div class="text-lg text-gray-600 dark:text-gray-200 truncate">
     <div>
       { title }
     </div>

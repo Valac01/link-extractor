@@ -30,11 +30,11 @@
 
 <section>
   <div class="flex justify-between">
-    <h3 class="text-gray-600 text-lg half-underline">Paste your html code here</h3>
+    <h3 class="text-gray-600 dark:text-gray-200 text-lg half-underline">Paste your html code here</h3>
     <Btn on:click={reset}>Reset</Btn>
   </div>
   <div class="html-area">
-    <div class="html-input rounded-md shadow-lg overflow-x-auto text-xs text-gray-500" contenteditable="true" bind:textContent={htmlInput} on:input={updateStore}></div>
+    <div class="html-input rounded-md shadow-lg overflow-x-auto text-xs bg-white dark:bg-gray-500 text-gray-500 dark:text-gray-100" contenteditable="true" bind:textContent={htmlInput} on:input={updateStore}></div>
     <div class="html-btn">
       <Btn primary={true} on:click={onExtract}>Extract</Btn>
     </div>
@@ -57,7 +57,6 @@
   }
 
   .html-input {
-    background-color: white;
     grid-column: 1/2;
     grid-row: 1/2;
     z-index: 1;

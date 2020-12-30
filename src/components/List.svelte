@@ -21,7 +21,7 @@
 
 <section class="mt-8">
   <div class="flex justify-between mb-2">
-    <h3 class="text-gray-600 text-lg half-underline">Links</h3>
+    <h3 class="text-gray-600 dark:text-gray-200 text-lg half-underline">Links</h3>
     <div class="controls">
       <Btn primary={true} on:click={copyAllLinks}>Copy All</Btn>
       <Btn on:click={deleteAllLinks}>Delete All</Btn>
