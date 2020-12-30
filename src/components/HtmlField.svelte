@@ -50,6 +50,12 @@
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
   }
+  @media (min-width: 640px) {
+    .html-area {
+      height: 400px;
+    }
+  }
+
   .html-input {
     background-color: white;
     grid-column: 1/2;

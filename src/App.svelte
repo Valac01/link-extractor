@@ -7,7 +7,7 @@
 
 <Navbar />
 <main class="bg-gray-100 px-2 sm:px-0 py-4">
-	<div class="container">
+	<div class="container max-w-screen-lg">
 		<HtmlField />
 		<List />
 		<ShadowDiv />
