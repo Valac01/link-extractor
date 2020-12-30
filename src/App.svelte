@@ -1,8 +1,9 @@
 <script>
 	import Navbar from './components/Navbar.svelte'
-	import HtmlField from './components/HtmlField.svelte';
-	import List from './components/List.svelte';
-  import ShadowDiv from './components/ShadowDiv.svelte'
+	import HtmlField from './components/HtmlField.svelte'
+	import List from './components/List.svelte'
+	import ShadowDiv from './components/ShadowDiv.svelte'
+	import Copyright from './components/Copyright.svelte'
 </script>
 
 <Navbar />
@@ -12,8 +13,8 @@
 		<List />
 		<ShadowDiv />
 	</div>
+	<Copyright />
 </main>
-
 <style>
 	main {
 		margin-top: 60px;
