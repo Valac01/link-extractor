@@ -33,7 +33,7 @@
       <ListItem id={id} title={title} link={link}/>
     </div>
   {:else}
-    <div>
+    <div class="text-2xl font-bold text-gray-400 text-center mt-4">
       No links to copy
     </div>
   {/each}
