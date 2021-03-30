@@ -23,3 +23,14 @@ npm run dev
 ```bash
 npm run build
 ```
+
+## Deployment
+I deployed the app in firebase using github actions, so you need to delete these files for your project so that it won't interfere with your deployment.
+
+```
+.
+├── ...
+├── .github                 # Github actions files
+├── .firebaserc             # Firebase file
+├── firebase.json           # Firebase file
+```
